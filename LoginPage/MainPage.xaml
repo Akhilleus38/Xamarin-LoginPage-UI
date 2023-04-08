@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:LoginPage"
+             x:Class="LoginPage.MainPage"
+
+             BackgroundImageSource="background.jpg">
+
+    <StackLayout>
+        <Grid RowSpacing="25" RowDefinitions="Auto,Auto,Auto,Auto">
+            <StackLayout Grid.Row="4">
+                <Label Text="Giriş Yap"
+                       FontSize="25"
+                       TextColor="White"
+                       HorizontalTextAlignment="Center"
+                       FontAttributes="Bold"/>
+                <Frame BorderColor="White"
+                       BackgroundColor="Transparent"
+                       Margin="15"
+                       Padding="0"
+                       CornerRadius="50">
+                    <Frame
+                        BorderColor="White"
+                        BackgroundColor="Transparent"
+                        Margin="1"
+                        Padding="25,0,25,0"
+                        CornerRadius="50">
+                        <local:CustomEntry
+                            TextColor="White"
+                            FontSize="18"
+                            Placeholder="Kullanıcı Adı"
+                            PlaceholderColor="White"/>
+
+                    </Frame>
+                </Frame>
+
+                <Frame BorderColor="White"
+                       BackgroundColor="Transparent"
+                       Margin="15"
+                       Padding="0"
+                       CornerRadius="50">
+                    <Frame
+                        BorderColor="White"
+                        BackgroundColor="Transparent"
+                        Margin="1"
+                        Padding="25,0,25,0"
+                        HeightRequest="60"
+                        CornerRadius="50">
+                        <local:CustomEntry
+                            TextColor="White"
+                            FontSize="18"
+                            Placeholder="Şifre"
+                            IsPassword="False"   
+                            PlaceholderColor="White"
+                            x:Name="EntryPassword"/>
+
+                    </Frame>
+                </Frame>
+
+                <RelativeLayout Padding="25">
+                    <CheckBox
+                        Color="White"
+                        IsChecked="true"
+                        x:Name="CheckBox"
+                        Margin="15,0,0,0"/>
+                    <Label
+                        Text="Şifreyi Göster"
+                        TextColor="White"
+                        FontSize="18"
+                        RelativeLayout.XConstraint="50"
+                        RelativeLayout.YConstraint="3"/>
+                    <Button 
+                        x:Name="ForgotPasswordButton"
+                        Text="Şifremi Unuttum"
+                        TextColor="White"
+                        FontSize="18"
+                        BackgroundColor="Transparent"
+                        RelativeLayout.XConstraint="205"
+                        RelativeLayout.YConstraint="-8"
+                        Clicked="ForgotPasswordButton_Clicked"
+                        TextTransform="None"/>
+                </RelativeLayout>
+
+                <Button
+                    x:Name="SigUpButton"
+                    Text="Kayıt Ol"
+                    TextColor="Red"
+                    BorderWidth="2"
+                    BorderColor="#ffd1d1"
+                    Margin="10,0,10,0"
+                    FontSize="18"
+                    Clicked="SigUpButton_Clicked"
+                    HeightRequest="60"
+                    CornerRadius="60"
+                    BackgroundColor="white"/>
+
+                <Button
+                    x:Name="LogInButton"
+                    Text="Giriş Yap"
+                    TextColor="White"
+                    BorderWidth="2"
+                    BorderColor="#f4805a"
+                    BackgroundColor="#f4808a"
+                    Margin="10,0,10,0"
+                    FontSize="18"
+                    HeightRequest="60"
+                    CornerRadius="50"
+                    Clicked="LogInButton_Clicked"/>
+            </StackLayout>
+            
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
